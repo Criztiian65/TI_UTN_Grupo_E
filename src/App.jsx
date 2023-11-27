@@ -13,7 +13,7 @@ function App() {
       bg="#E69696"
     >
       <Box border="3px" mt="20" boxShadow="dark-lg" rounded="md" p="1">
-        <Flex w="38vh" flexDirection="column" bg="white">
+        <Flex w="full" flexDirection="column" bg="white">
           <TaskForm />
           <TaskList />
         </Flex>

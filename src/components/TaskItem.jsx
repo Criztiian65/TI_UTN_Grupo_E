@@ -11,23 +11,15 @@ const TaskItem = () => {
     <Box>
       {listaTareas.map((tarea) => {
         return (
-          <Flex
-            key={tarea.id}
-            w="full"
-            m="15px"
-            justifyContent="space-between"
-            mx="20px"
-          >
+          <Flex key={tarea.id} w="full" m="15px" justifyContent="space-between">
             <Box
               display="flex"
               alignItems="center"
               borderBottom="1px"
               borderColor="#F0F0F0"
-              border
             >
               <Box>
                 <CheckCircleIcon
-                  mx="2"
                   mb="2"
                   sx={{
                     height: "20px",
@@ -48,7 +40,6 @@ const TaskItem = () => {
                 {tarea.nombre}
               </Text>
               <DeleteIcon
-                ml="14"
                 isDisabled={!tarea.completed}
                 onClick={() => {
                   handleDeleted(tarea.id);
