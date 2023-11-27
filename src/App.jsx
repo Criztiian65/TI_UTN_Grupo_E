@@ -1,6 +1,4 @@
-import { NewContext } from './components/provider/ProvContext'
-import { Box, Text } from '@chakra-ui/react'
-import TaskItem from './components/TaskItem'
+import { Box, Text, Badge } from '@chakra-ui/react'
 import TaskForm from './components/TaskForm'
 import TaskList from './components/TaskList'
 

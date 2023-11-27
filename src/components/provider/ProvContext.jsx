@@ -5,6 +5,7 @@ export const NewContext = createContext()
 const ProvContext = ({ children }) => {
 
   const [tarea, setTarea] = useState('')
+  const [check, setCheck] = useState(false)
 
   const [listaTareas, setListTareas] = useState(
     [{
@@ -12,17 +13,17 @@ const ProvContext = ({ children }) => {
       nombre: 'algo para hacer1',
       completed: true
     }, {
-      id: 1,
+      id: 2,
       nombre: 'algo para hacer2',
       completed: false
     }, {
-      id: 1,
+      id: 3,
       nombre: 'algo para hacer3',
       completed: false
     }])
 
   // tarea va a tener id, nombre, completed
-
+  console.log(listaTareas)
 
 
   const handleSubmit = () => {
@@ -34,27 +35,35 @@ const ProvContext = ({ children }) => {
   const handleChange = (e) => {
     setTarea(e.target.value)
   }
-  console.log(listaTareas)
+  
 
-  const handleCompleted = (tareaid) => {
-    listaTareas.map(() => {
-      if (tarea.id !== tareaid) return tarea
+  const handleCompleted = (id) => {
+    console.log(id);
+    
+    const changeCheck =listaTareas.map((tarea) => {
+      if (tarea.id !== id) return tarea
 
       return {
         ...tarea,
         completed: !tarea.completed
       }
+
     })
+    setListTareas(changeCheck)
+    
   }
 
-  const handleDeleted = ()=>{
-    const tareasFiltradas = listaTareas.filter((tarea)=> !tarea.completed)
+
+
+  const handleDeleted = (id)=>{
+    const tareasFiltradas = listaTareas.filter((tarea)=> (tarea.id !== id))
+
     setListTareas(tareasFiltradas)
   }
 
   return (
     <NewContext.Provider
-      value={{ handleChange, handleSubmit, handleCompleted, handleDeleted, listaTareas }}
+      value={{ handleChange, handleSubmit, handleCompleted, handleDeleted, listaTareas, check}}
     >
       {children}
 
