@@ -6,7 +6,7 @@ import TaskItem from "./TaskItem";
 
 const TaskList = () => {
   return (
-    <Box maxW="50vh">
+    <Box maxW="30vh">
       <TaskItem />
     </Box>
   );

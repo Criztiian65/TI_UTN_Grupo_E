@@ -12,8 +12,8 @@ function App() {
       p="10px"
       bg="#E69696"
     >
-      <Box border="3px" mt="20" boxShadow="dark-lg" rounded="md" p="1">
-        <Flex w="full" flexDirection="column" bg="white">
+      <Box mt="20" boxShadow="dark-lg" rounded="md" p="1">
+        <Flex w="35vh" flexDirection="column" bg="white">
           <TaskForm />
           <TaskList />
         </Flex>

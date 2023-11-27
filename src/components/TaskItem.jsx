@@ -8,10 +8,10 @@ const TaskItem = () => {
     useContext(NewContext);
 
   return (
-    <Box>
+    <Box justifyContent="space-between">
       {listaTareas.map((tarea) => {
         return (
-          <Flex key={tarea.id} w="full" m="15px" justifyContent="space-between">
+          <Flex key={tarea.id} w="full" m="15px">
             <Box
               display="flex"
               alignItems="center"
@@ -40,6 +40,7 @@ const TaskItem = () => {
                 {tarea.nombre}
               </Text>
               <DeleteIcon
+                justifyItems="center"
                 isDisabled={!tarea.completed}
                 onClick={() => {
                   handleDeleted(tarea.id);
