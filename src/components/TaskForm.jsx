@@ -5,13 +5,17 @@ import { NewContext } from './provider/ProvContext'
 
 const TaskForm = () => {
 
-    const {handleChange, handleSubmit} = useContext(NewContext)
+    const {handleChange, handleSubmit,tarea } = useContext(NewContext)
 
   return (
     <Box>
-        <FormLabel>Label task form</FormLabel>
-        <Input onSubmit={handleSubmit} onChange={handleChange}/>
-        <IconButton icon={<AddIcon/>}></IconButton>
+        <form onSubmit={handleSubmit}>
+
+        <FormLabel name='textTarea' >Label task form</FormLabel>
+        <Input type='text' name='textTarea' onChange={handleChange}/>
+        <IconButton onClick={handleSubmit} icon={<AddIcon/>}></IconButton>
+
+        </form>
     </Box>
   )
 }

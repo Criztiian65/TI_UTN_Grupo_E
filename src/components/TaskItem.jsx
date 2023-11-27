@@ -5,7 +5,7 @@ import { CheckIcon, CheckCircleIcon } from '@chakra-ui/icons'
 
 const TaskItem = () => {
 
-    const { listaTareas, handleDeleted, handleCompleted, check } = useContext(NewContext)
+    const { listaTareas, handleDeleted, handleCompleted } = useContext(NewContext)
 
     return (
 

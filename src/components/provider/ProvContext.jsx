@@ -4,8 +4,10 @@ export const NewContext = createContext()
 
 const ProvContext = ({ children }) => {
 
+  
+
   const [tarea, setTarea] = useState('')
-  const [check, setCheck] = useState(false)
+  const [completed, setCompleted] = useState(false)
 
   const [listaTareas, setListTareas] = useState(
     [{
@@ -26,14 +28,29 @@ const ProvContext = ({ children }) => {
   console.log(listaTareas)
 
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log('Hiciste submit ' + tarea);
+const id = listaTareas.length > 0 ? listaTareas[listaTareas.length-1].id : 1;
+ console.log('estot es id ' +id)
 
-    console.log('Hiciste submit');
+    const newTarea = {
+      id: id+1,
+      nombre: tarea,
+      completed: completed
+    }
+  
+    listaTareas.push(newTarea)
+
+    setListTareas(listaTareas)
 
   }
 
+
+
   const handleChange = (e) => {
     setTarea(e.target.value)
+    console.log(e.target.value);
   }
   
 
@@ -63,7 +80,7 @@ const ProvContext = ({ children }) => {
 
   return (
     <NewContext.Provider
-      value={{ handleChange, handleSubmit, handleCompleted, handleDeleted, listaTareas, check}}
+      value={{ handleChange, handleSubmit, handleCompleted, handleDeleted, listaTareas}}
     >
       {children}
 
