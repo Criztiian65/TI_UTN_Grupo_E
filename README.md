@@ -1,8 +1,20 @@
-# React + Vite
+GRUPO E UTN
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+To do List
 
-Currently, two official plugins are available:
+Este es el Proyecto final integrado, donde se creo una lista 
+de tareas, que nos permite enlistar las actividades, pendientes, 
+recordatorios, a su ves nos permite marcar o desmarcar las 
+actividades que se realizaron, eliminar aquella que ya no pensamos
+realizar o simplemente no nos sirve, una lista de tarea te permite 
+estar mas organizado y saber cuales son los objetivos que tienes 
+que logra en el dia.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Se aplicaron tecnologias como React Vite y Chakra UI
+
+Este proyecto fue realizado por Cristian Ojeda y Jesus Omana
+
+Tuvo Colaboracion Liliana Quintana
+
+Lamentablemente no contamos con los aportes que correspondian
+de parte del proyecto de Brando Mosqueda
